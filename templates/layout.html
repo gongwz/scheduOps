@@ -1,0 +1,184 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PilotOps v1.3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/static/rbac/css/rbac.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/flat-admin.css">
+  <!-- Theme -->
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/theme/blue-sky.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/theme/blue.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/theme/red.css">
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/theme/yellow.css">
+  
+  
+  {% block css %}{% endblock %}
+   {% block extracss %}{% endblock %}
+</head>
+
+<body>
+  <div class="app app-default">
+
+<aside class="app-sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <a class="sidebar-brand" href="/index/"> PilotOps&nbsp&nbsp <span class="highlight"> v1.3</span></a>
+    <button type="button" class="sidebar-toggle">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+  
+  
+    <!--开始左侧导航-->
+
+    <!--左侧导航结束-->
+  
+  <div class="sidebar-footer">
+    <ul class="menu">
+      <li>
+        <a href="/" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li><a href="#"><span class="flag-icon flag-icon-th flag-icon-squared"></span></a></li>
+    </ul>
+  </div>
+</aside>
+
+<script type="text/ng-template" id="sidebar-dropdown.tpl.html">
+  <div class="dropdown-background">
+    <div class="bg"></div>
+  </div>
+  <div class="dropdown-container">
+    {{list}}
+  </div>
+</script>
+
+
+<div class="app-container">
+  <nav class="navbar navbar-default" id="navbar">
+  <div class="container-fluid">
+    <div class="navbar-collapse collapse in">
+      <ul class="nav navbar-nav navbar-mobile">
+        <li>
+          <button type="button" class="sidebar-toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </li>
+        <li class="logo">
+          <a class="navbar-brand" href="#"><span class="highlight">Flat v3</span> Admin</a>
+        </li>
+        <li>
+          <button type="button" class="navbar-toggle">
+            <img class="profile-img" src="/static/assets/images/profile.png">
+          </button>
+        </li>
+      </ul>
+      
+      <!--头部子菜单导航样式 multi_menu-->
+      <ul class="nav navbar-nav navbar-left">
+        
+        <li class="navbar-search hidden-sm">
+          <input id="search" type="text" placeholder="Search..">
+          <button class="btn-search"><i class="fa fa-search"></i></button>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown notification">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+            <div class="title">New Orders</div>
+            <div class="count">0</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Ordering</li>
+              <li class="dropdown-empty">No New Ordered</li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown notification warning">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
+            <div class="title">Unread Messages</div>
+            <div class="count">0</div>
+          </a>
+          
+        </li>
+        <li class="dropdown notification danger">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-bell" aria-hidden="true"></i></div>
+            <div class="title">System Notifications</div>
+            <div class="count">0</div>
+          </a>
+        </li>
+        
+        <li class="dropdown profile">
+          <a href="/html/pages/profile.html" class="dropdown-toggle"  data-toggle="dropdown">
+            <img class="profile-img" src="/static/assets/images/profile.png">
+            <div class="title">Profile</div>
+          </a>
+          <div class="dropdown-menu">
+            <div class="profile-info">
+              <h4 class="username">Weizhen</h4>
+            </div>
+            <ul class="action">
+              <li>
+                <a href="#">
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge badge-danger pull-right">0</span>
+                  My Inbox
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Setting
+                </a>
+              </li>
+              <li>
+                <a href="/logout/">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+   <!--这里继承各系统子页面-->
+   {% block content %} {% endblock %}
+   
+  <footer class="app-footer"> 
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="footer-copyright">
+        Copyright © 2019 Company Co,Ltd. Weizhen
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+  </div>
+  
+  <script type="text/javascript" src="/static/assets/js/vendor.js"></script>
+  <script type="text/javascript" src="/static/assets/js/app.js"></script>
+  <script type="text/javascript" src="/static/rbac/js/rbac.js"></script>
+  <script type="text/javascript" src="/static/stark/plugins/js/bootstrap.min.js"></script>
+
+  
+
+</body>
+</html>

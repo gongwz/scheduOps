@@ -1,0 +1,334 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+
+    <style>
+        .side{
+            position：fixed；
+            left：0px；
+            top:0px;
+            bottom:px;
+        }
+
+        .divMain{ 
+			width:100px;
+			height: 100px;
+			padding:0px;
+		}
+		.divMain img{ 
+			width:100%;		
+			height:100%;	
+			display:block;
+		}
+
+        img:hover {
+            transform: rotateX(360deg);
+            width:120%;
+            height:120%;	
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block content %}
+<!--块状统计-->
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+     <a class="card card-banner card-orange-light">
+      <div class="card-body">
+        <i class="icon fa fa-gitlab fa-4x"></i>
+        <div class="content">
+          <div class="title">APP</div>
+          <div class="value"><span class="sign"></span>420</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+     <a class="card card-banner card-blue-light">
+      <div class="card-body">
+        <i class="icon fa fa-server fa-4x"></i>
+        <div class="content">
+          <div class="title">IP</div>
+          <div class="value"><span class="sign"></span>2453</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <a class="card card-banner card-yellow-light">
+      <div class="card-body">
+        <i class="icon fa fa-user-plus fa-4x"></i>
+        <div class="content">
+          <div class="title">CMDB</div>
+          <div class="value"><span class="sign"></span>50</div>
+        </div>
+      </div>
+    </a>
+  </div>
+ </div>
+<!--块状统计结束-->
+
+
+<div class="row">
+  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+     <a class="card card-banner card-orange-light">
+      <div class="card-body">
+        <div class="content">
+          <div class="title">配置管理</div>
+          <div class="value" style="font-size: 2em;"><span class="sign"></span>GitLab</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+     <a class="card card-banner card-blue-light">
+      <div class="card-body">
+        <div class="content">
+          <div class="title">注册发现</div>
+          <div class="value" style="font-size: 2em;"><span class="sign"></span>Consul</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+      <a class="card card-banner card-yellow-light">
+      <div class="card-body">
+        <div class="content">
+          <div class="title">部分发布</div>
+          <div class="value" style="font-size: 2em;"><span class="sign"></span>Jenkins</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+     <a class="card card-banner card-orange-light">
+      <div class="card-body">
+        <div class="content">
+          <div class="title">微服务</div>
+          <div class="value" style="font-size: 2em;"><span class="sign"></span>Apollo</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  
+  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+     <a class="card card-banner card-blue-light">
+      <div class="card-body">
+        <div class="content">
+          <div class="title">APM</div>
+          <div class="value" style="font-size: 1.5em;"><span class="sign"></span>Skywalking</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+      <a class="card card-banner card-yellow-light">
+      <div class="card-body">
+        <div class="content">
+          <div class="title">系统监控</div>
+          <div class="value" style="font-size: 2em;"><span class="sign"></span>Zabbix</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+ </div>
+
+<!--内嵌个ELK
+  <div class="row">
+    <div class="col-md-12">
+        <div class="card card-mini">
+          <div class="card-body no-padding table-responsive">
+          <div>
+            <iframe src="http://192.168.61.247:5601" width="100%" height="500px"  frameborder="0" leftmargin="0" topmargin="0">
+            </iframe>                       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-mini">
+          <div class="card-body no-padding table-responsive">
+          <div>
+            <iframe src="https://fzwebapps.yjbtest.com/yjbwebstockLiving/stockLiving/web/stockLiving/build/html/videoDetail.html?app_id=yjb3.0&name=%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90&rid=1000069&aid=" width="100%" height="500px"  frameborder="0" leftmargin="0" topmargin="0">
+            </iframe>                       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--内嵌个ELK-->
+
+
+<!--首页导航区域
+<div class="row">
+    <div class="col-md-1 divMain">
+            <a href="http://192.168.24.191:8080/jenkins/" target="_blank">
+                <img src="/static/images/icon/jenkins.png"/>
+             </a>      
+    </div>
+    
+    <div class="col-md-1 divMain">
+            <a href="http://192.168.24.173/" target="_blank">
+                <img src="/static/images/icon/gitlab1.png"/>
+            </a>
+    </div>
+    
+   <div class="col-md-1 divMain">
+            <a href="http://192.168.24.99:8080/secure/Dashboard.jspa" target="_blank">
+                <img src="/static/images/icon/jira-logo.png"/>
+             </a>        
+    </div>
+    
+    <div class="col-md-1">
+        <div class="divMain">
+            <a href="http://192.168.61.247:5601" target="_blank">
+                <img src="/static/images/icon/kibana.png"/>
+             </a>
+        </div> 
+        
+    </div>
+</div>-->
+<!--首页导航区域结束-->
+
+
+
+<div class="row">
+  <!--开始左侧清单-->
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="card card-mini">
+      <div class="card-header">
+        <div class="card-title">Last Statuses</div>
+        <ul class="card-action">
+          <li>
+            <a href="/">
+              <i class="fa fa-refresh"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="card-body no-padding table-responsive">
+        <table class="table card-table">
+          <thead>
+            <tr>
+              <th>Products</th>
+              <th class="right">Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MicroSD 64Gb</td>
+              <td class="right">12</td>
+              <td><span class="badge badge-success badge-icon"><i class="fa fa-check" aria-hidden="true"></i><span>Complete</span></span></td>
+            </tr>
+            <tr>
+              <td>MiniPC i5</td>
+              <td class="right">5</td>
+              <td><span class="badge badge-warning badge-icon"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Pending</span></span></td>
+            </tr>
+            <tr>
+              <td>Mountain Bike</td>
+              <td class="right">1</td>
+              <td><span class="badge badge-info badge-icon"><i class="fa fa-credit-card" aria-hidden="true"></i><span>Confirm Payment</span></span></td>
+            </tr>
+            <tr>
+              <td>Notebook</td>
+              <td class="right">10</td>
+              <td><span class="badge badge-danger badge-icon"><i class="fa fa-times" aria-hidden="true"></i><span>Cancelled</span></span></td>
+            </tr>
+            <tr>
+              <td>Raspberry Pi2</td>
+              <td class="right">6</td>
+              <td><span class="badge badge-primary badge-icon"><i class="fa fa-truck" aria-hidden="true"></i><span>Shipped</span></span></td>
+            </tr>
+            <tr>
+              <td>Flashdrive 128Mb</td>
+              <td class="right">40</td>
+              <td><span class="badge badge-info badge-icon"><i class="fa fa-credit-card" aria-hidden="true"></i><span>Confirm Payment</span></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+   <!--结束左侧清单-->
+
+    <!--开始右侧饼图-->
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="card card-tab card-mini">
+          <div class="card-header">
+            <ul class="nav nav-tabs tab-stats">
+              <li role="tab1" class="active">
+                <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Browsers</a>
+              </li>
+              <li role="tab2">
+                <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">OS</a>
+              </li>
+              <li role="tab2">
+                <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">More</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body tab-content">
+            <div role="tabpanel" class="tab-pane active" id="tab1">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="chart ct-chart-browser ct-perfect-fourth"></div>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="chart-label">
+                    <li class="ct-label ct-series-a">Google Chrome</li>
+                    <li class="ct-label ct-series-b">Firefox</li>
+                    <li class="ct-label ct-series-c">Safari</li>
+                    <li class="ct-label ct-series-d">IE</li>
+                    <li class="ct-label ct-series-e">Opera</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab2">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="chart ct-chart-os ct-perfect-fourth"></div>
+                </div>
+                <div class="col-sm-4">
+                  <ul class="chart-label">
+                    <li class="ct-label ct-series-a">iOS</li>
+                    <li class="ct-label ct-series-b">Android</li>
+                    <li class="ct-label ct-series-c">Windows</li>
+                    <li class="ct-label ct-series-d">OSX</li>
+                    <li class="ct-label ct-series-e">Linux</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab3">
+            </div>
+          </div>
+        </div>
+      </div>
+  <!--结束右侧饼图-->
+</div>
+
+<!--块状统计结束-->
+        
+       
+{% endblock %}

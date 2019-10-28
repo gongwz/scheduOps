@@ -1,0 +1,179 @@
+{% extends 'layout.html' %}
+{% block css %}
+    <style>
+        .search-group {
+            padding: 5px 10px;
+        }
+
+        .search-group .row .whole {
+            min-width: 100px;
+            float: left;
+            display: inline-block;
+            padding: 5px 0 5px 8px;
+            margin: 3px;
+            font-weight: bold;
+            text-align: right;
+
+        }
+
+        .search-group .row .others {
+            padding-left: 60px;
+        }
+
+        .search-group .row a {
+            display: inline-block;
+            padding: 5px 8px;
+            margin: 3px;
+            border: 1px solid #d4d4d4;
+
+        }
+
+        .search-group .row a {
+            display: inline-block;
+            padding: 5px 8px;
+            margin: 3px;
+            border: 1px solid #d4d4d4;
+        }
+
+        .search-group a.active {
+            color: #fff;
+            background-color: #39c3da;
+            border-color: #39c3da;
+        }
+
+         a span.showSpan:hover {background-color:#d0d0d0;}
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12"> <!--快速筛选-->
+          <div class="card">
+
+                <div class="card-body">
+                    {% if search_group_row_list %}
+                    <div class="search-group">
+                        {% for row in search_group_row_list %}
+                            <div class="row">
+                                {% for obj in row %}
+                                    {{ obj|safe }}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                     {% endif %}
+        
+                    <hr />
+
+        
+                    <div class="row">
+                         {% if add_btn %}
+                         <div class="col-md-3">
+                            <div style="float: left;margin-top: 10px">
+                                {{ add_btn|safe }}
+                            </div>
+
+                            </div>
+
+                        <div class="col-md-3">
+                             <div style="float: left;margin-top: 10px">
+                                {{ release_btn|safe }}
+                            </div>
+
+                            </div>
+
+                        {% endif %}
+                                                        
+                        {% if search_list %}
+                              <div class="col-md-6" style="float: right">
+                                    <div style="float: right;margin-right: 10px;">
+                                        <form method="GET" class="form-inline">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" style="margin-top:10px" name="q" value="{{ search_value }}" placeholder="关键字搜索">
+                                                <button class="btn btn-info" type="submit">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                               
+                            </div>
+                      {% endif %}
+                    </div> 
+                </div>
+            </div>
+        </div> <!--快速筛选-->
+            
+    </div> <!--添加跟关键字搜索--> 
+      <div class="row">
+            <div class="col-xs-12">
+              <div class="card">
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% if action_dict %}
+                        <div style="float: left;margin: 5px 10px 5px 0;">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <select class="form-control" name="action">
+                                        <option value="">请选择操作</option>
+                                        {% for func_name,func_text in action_dict.items %}
+                                            <option value="{{ func_name }}">{{ func_text }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <input class="btn btn-primary" type="submit" value="执行"/>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          {% for item in header_list %}
+                                <th>{{ item }}</th>
+                            {% endfor %}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for row in body_list %}
+                            <tr>
+                                {% for ele in row %}
+                                    <td>{{ ele }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                        
+                      </tbody>
+                    </table>
+                    
+                    
+                    
+                </form>
+                
+                
+                
+            </div>
+        </div>
+        </div>
+        
+         <div class="row">
+        <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                    <div style="float: right;">
+                    <nav>
+                        <ul class="pagination">
+                            {{ pager.page_html|safe }}
+                        </ul>
+                    </nav>
+                </div>
+                </div>
+                </div>
+        
+        
+    </div>
+    
+    
+
+{% endblock %}

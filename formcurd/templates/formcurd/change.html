@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block css %}
+    <style>
+
+        
+        .form-group-stark {
+            margin-bottom: 20px;
+        }
+        
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+    <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+                    <form class="form form-horizontal" method="post">
+                        {% csrf_token %}
+
+                        {% for field in form %}
+                            <div class="form-group form-group-stark">
+                                <label class="col-sm-2 control-label">{{ field.label }}</label>
+                                <div class="col-sm-8 ">
+                                    {{ field }}
+                                    <span style="color: red;">{{ field.errors.0 }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-8">
+                                <input type="submit" value="保 存" class="btn btn-success">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+          </div>
+        </div>
+    </div>
+    
+    
+    
+
+{% endblock %}
