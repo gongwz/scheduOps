@@ -33,6 +33,7 @@ pip3 install -r requirements.txt
 使用本项目之前请先阅读本人另外两个项目：
 
 https://github.com/gongwz/formcurd.git  
+https://github.com/gongwz/pilot.git  
 
 
 >Author: 卫振 （weizhen）  -- 首次尝试微博图床 ^_-
