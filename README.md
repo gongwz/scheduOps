@@ -35,4 +35,4 @@ pip3 install -r requirements.txt
 https://github.com/gongwz/formcurd.git  
 
 
->Author: 卫振 （weizhen）  
+>Author: 卫振 （weizhen）  -- 首次尝试微博图床 ^_-
