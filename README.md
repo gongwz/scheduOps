@@ -14,7 +14,7 @@
 
 ### ScheduOps 能做什么？
 
-以下案例是 scheduOps 在发布系统中的使用场景，封装了 SaltStack Api、AnsibleApi、JenkinsApi、JiraApi等，使用一套平台操作各类自动化流程，进行集中管理。
+以下案例是 scheduOps 在发布系统（Pilot）中的使用场景，封装了 SaltStack Api、AnsibleApi、JenkinsApi、JiraApi等，使用一套平台操作各类自动化流程，进行集中管理。
 
 ![img](https://wx1.sinaimg.cn/mw1024/006zTkUSgy1g8iligj2y5j31es0k8dm7.jpg)
 
